@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моноподы для селфи</title>
+</head>
+<body>
+ <header></header>
+ <main class="main-inner">
+   <header class="inner-header">
+     <h1 class="inner-header-title">Моноподы для селфи</h1>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link" href="#">Каталог товаров</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link">Моноподы для селфи</a>
+        </li>
+      </ul>
+   </header>
+   <section class="filter">
+     <h2 class="filter-title">Фильтр:</h2>
+     <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+       <fieldset class="filter">
+         <legend class="filter-title">Стоимость</legend>
+          <input type="range" min="0" max="5000" step="1">
+          <span class="range-level">от 0</span>
+          <span class="range-level">до 5000</span>
+       </fieldset>
+       <fieldset class="filter">
+         <legend class="filter-title">Цвет</legend>
+         <ul class="filter-choice">
+           <li class="filter-choice-item">
+             <label class="label-choice">
+            <input class="filter-input" type="checkbox" name="black" checked>
+           Черный</label>
+           </li>
+            <li class="filter-choice-item">
+            <label class="label-choice">
+           <input class="filter-input" type="checkbox" name="white" checked>
+           Белый</label>
+            </li>
+            <li class="filter-choice-item">
+            <label class="label-choice">
+            <input class="filter-input" type="checkbox" name="blue">
+           Синий</label>
+           </li>
+           <li class="filter-choice-item">
+            <label class="label-choice">
+            <input class="filter-input" type="checkbox" name="red">
+           Красный</label>
+           </li>
+           <li class="filter-choice-item">
+            <label class="label-choice">
+            <input class="filter-input" type="checkbox" name="pink">
+          Розовый</label>
+           </li>
+          </ul>
+       </fieldset>
+       <fieldset class="filter">
+         <legend class="filter-title">Bluetooth</legend>
+         <ul class="filter-choice">
+           <li class="filter-choice-item">
+             <label class="label-choice">
+               <input class="filter-input" type="radio" name="bluetooth-group" value="yes" checked>
+              Есть</label>
+           </li>
+           <li class="filter-choice-item">
+            <label class="label-choice">
+              <input class="filter-input" type="radio" name="bluetooth-group" value="no">
+             Нет</label>
+          </li>
+         </ul>
+       </fieldset>
+       <button class="btn big-btn" type="submit">Показать</button>
+     </form>
+   </section>
+   <section class="sort">
+      <h2 class="sort-title">Сортировка:</h2>
+      <form class="sort" action="https://echo.htmlacademy.ru/" method="get">
+        <select class="sort-select">
+          <option value="popular">Популярные</option>
+        </select>
+      </form>
+   </section>
+ </main>
+ <footer class="page-footer"></footer>
+</body>
+</html>
