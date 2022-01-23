@@ -10,10 +10,12 @@
 <header class="page-header">
   <nav class="navigation">
     <a class="logo">
-      <img src="#" alt="Логотип компании Девайс">
+      <img class="logo-photo" src="#" alt="Логотип компании Девайс">
     </a>
     <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-      <input type="search" name="search" placeholder="Текст поиска">
+       <label class="search-label">
+        <input type="search" name="search" placeholder="Текст поиска">
+       </label>
       <button class="search-button" type="submit">Найти</button>
     </form>
     <ul class="nav-user">
@@ -76,23 +78,23 @@
          <b class="promo-list-item-description">Порхает как бабочка, жалит как пчела!</b>
          <p class="promo-list-item-description">Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
          <a class="promo-list-item-details btn" href="#">Подробнее</a>
-         <button class="promo-list-pangination current-pangintion">
+         <button class="promo-list-pagination current-pagintion">
            <span class="visually-hidden">текущий слайд</span>
          </button>
-         <button class="promo-list-pangination">
+         <button class="promo-list-pagination">
           <span class="visually-hidden">следующий слайд</span>
         </button>
-        <button class="promo-list-pangination">
+        <button class="promo-list-pagination">
           <span class="visually-hidden">следующий слайд</span>
         </button>
         <table class="promo-list-item-features">
-          <tr>
-            <td>800 м</td>
-            <td>50 м</td>
+          <tr class="promo-list-item-table-row">
+            <td class="promo-list-item-table-data">800 м</td>
+            <td class="promo-list-item-table-data">50 м</td>
           </tr>
-          <tr>
-            <td>Дальность полета</td>
-            <td>Радиус поражения</td>
+          <tr class="promo-list-item-table-row">
+            <td class="promo-list-item-table-data">Дальность полета</td>
+            <td class="promo-list-item-table-data">Радиус поражения</td>
           </tr>
         </table>
        </li>
@@ -103,19 +105,19 @@
         <b class="promo-list-item-description">Худеем правильно!</b>
         <p class="promo-list-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
         <a class="promo-list-item-details btn" href="#">Подробнее</a>
-        <button class="promo-list-pangination">
+        <button class="promo-list-pagination">
           <span class="visually-hidden">предыдущий слайд</span>
         </button>
-        <button class="promo-list-pangination current-pangintion">
+        <button class="promo-list-pagination current-pagintion">
          <span class="visually-hidden">текущий слайд</span>
        </button>
-       <button class="promo-list-pangination">
+       <button class="promo-list-pagination">
          <span class="visually-hidden">следующий слайд</span>
        </button>
        <table class="promo-list-item-features">
-         <tr>
-           <td>48 часов</td>
-           <td>Без подзарядки</td>
+         <tr class="promo-list-item-table-row">
+           <td class="promo-list-item-table-data">48 часов</td>
+           <td class="promo-list-item-table-data">Без подзарядки</td>
          </tr>
        </table>
       </li>
@@ -126,25 +128,25 @@
         <b class="promo-list-item-description">Делай селфи, как Бен Стиллер!</b>
         <p class="promo-list-item-description">Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
         <a class="promo-list-item-details btn" href="#">Подробнее</a>
-        <button class="promo-list-pangination">
+        <button class="promo-list-pagination">
           <span class="visually-hidden">предыдущий слайд</span>
         </button>
-        <button class="promo-list-pangination">
+        <button class="promo-list-pagination">
          <span class="visually-hidden">предыдущий слайд</span>
        </button>
-       <button class="promo-list-pangination current-pangintion">
+       <button class="promo-list-pagination current-pagintion">
          <span class="visually-hidden">текущий слайд</span>
        </button>
        <table class="promo-list-item-features">
-         <tr>
-           <td>8,5 кг</td>
-           <td>5 кг</td>
-           <td>Карбон</td>
+         <tr class="promo-list-item-table-row">
+           <td class="promo-list-item-table-data">8,5 кг</td>
+           <td class="promo-list-item-table-data">5 кг</td>
+           <td class="promo-list-item-table-data">Карбон</td>
          </tr>
-         <tr>
-          <td>Длина палки</td>
-          <td>Вес палки</td>
-          <td>Материал</td>
+         <tr class="promo-list-item-table-row">
+          <td class="promo-list-item-table-data">Длина палки</td>
+          <td class="promo-list-item-table-data">Вес палки</td>
+          <td class="promo-list-item-table-data">Материал</td>
         </tr>
        </table>
       </li>
@@ -249,13 +251,13 @@
        </address>
        <b class="contacts-info">Время работы</b>
        <table class="contacts-working-hours">
-         <tr>
-           <td>пн - пт:</td>
-           <td>с 10:00 до 22:00</td>
+         <tr class="contacts-working-hours-table-row">
+           <td class="contacts-working-hours-table-data">пн - пт:</td>
+           <td class="contacts-working-hours-table-data">с 10:00 до 22:00</td>
          </tr>
-         <tr>
-          <td>сб - вс:</td>
-          <td>с 10:00 до 19:00</td>
+         <tr class="contacts-working-hours-table-row">
+          <td class="contacts-working-hours-table-data">сб - вс:</td>
+          <td class="contacts-working-hours-table-data">с 10:00 до 19:00</td>
         </tr>
        </table>
        <a class="contacts-write-link btn" href="#">Напишите нам</a>
@@ -265,9 +267,11 @@
      <h2 class="subscription-title">Подпишитесь на рассылку</h2>
      <p class="subscription-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
      <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-       <input type="email" name="email" placeholder="Ваш e-mail">
-       <button class=" subscription-button big-font-link" type="submit">Подписаться</button>
-       <span class="subscriprion">Это бесплатно</span>
+       <label class="subscription-label">
+        <input class="subscription-input" type="email" name="email" placeholder="Ваш e-mail">
+       </label>
+       <button class="subscription-button big-font-link" type="submit">Подписаться</button>
+       <span class="subscription">Это бесплатно</span>
      </form>
    </section>
  </main>
@@ -275,7 +279,7 @@
 <section class="footer-address">
   <h2 class="visually-hidden">Адрес</h2>
   <a class="logo-footer" href="index.html">
-    <img src="#" alt="Логотип компании Девайс">
+    <img class="logo-footer-photo" src="#" alt="Логотип компании Девайс">
   </a>
   <address class="footer-address">
     <p class="address-details">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -316,7 +320,7 @@
   <h2 class="visually-hidden">Контактный телефон</h2>
   <a class="footer-phone-link" href="tel:+78128121212">+7(812) 812-12-12</a>
   <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-    <img src="#" alt="Логотип  HTML Академии">
+    <img class="htmlacademy-link-photo" src="#" alt="Логотип  HTML Академии">
   </a>
 </section>
  </footer>
