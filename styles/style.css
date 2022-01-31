@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -28,4 +28,432 @@
   font-style: normal;
   font-display: swap;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+}
+
+body {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+  background-color: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-header {
+  background-color: #FFE17F;
+}
+
+.search-form-input::placeholder,
+.search-button {
+  font-size: 16px;
+  line-height: 20px;
+  color:#000000;
+}
+
+.search-form-input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color:#000000;
+}
+
+.search-form-input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color:#000000;
+}
+
+.search-form-input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color:#000000;
+}
+
+.nav-user,
+.nav-main,
+.nav-main-subnav,
+.promo-list,
+.navigation-service,
+.catalog-list-items,
+.about-delivery-list,
+.footer-nav,
+.social-list,
+.breadcrumbs-list,
+.filter-choice,
+.product-list,
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.user-nav-link {
+  font-size: 16px;
+  line-height: 20px;
+  color:#000000;
+  text-decoration: none;
+}
+
+.nav-main-subnav-opener {
+  display: none;
+}
+
+.nav-main-subnav {
+  display: none;
+  background-color:#FFE17F;
+}
+
+.nav-main-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-main-subnav-opener:checked ~ .nav-main-subnav {
+  display: block;
+}
+
+.nav-main-subnav-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.promo-list-item-photo {
+  text-decoration: none;
+}
+
+b.promo-list-item-description,
+.service-content-title,
+.about-title,
+.contacts-title,
+.subscription-title,
+.inner-header-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.btn {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  border: none;
+}
+
+.current {
+  color: #FFE17F;
+  background-color: #000000;
+}
+
+.promo-list-item-table-row {
+  font-size: 36px;
+  color: #000000;
+}
+
+.promo-list-item-table-header {
+  font-size: 16px;
+}
+
+.catalog-list-item {
+  padding-top: 180px;
+  margin-bottom: 10px;
+}
+
+.catalog-list-item-link {
+  position: relative;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-decoration: none;
+}
+
+.catalog-list-item-link::before {
+  position: absolute;
+  top:-165px;
+  left:0;
+  content: "";
+  display: block;
+  height: 160px;
+  width: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFE17F;
+  border: none;
+}
+
+.virtual-reality::before {
+  background-image:url("/images/decorative-images/catalog-virtual-reality.svg");
+}
+
+.monopods::before {
+  background-image:url("/images/decorative-images/catalog-monopods.svg");
+}
+
+.action-cameras::before {
+  background-image:url("/images/decorative-images/catalog-action-cameras.svg");
+}
+
+.fitness::before {
+  background-image:url("/images/decorative-images/catalog-fitness.svg");
+}
+
+.smart-watch::before {
+  background-image:url("/images/decorative-images/catalog-smart-watch.svg");
+}
+
+.quadcopters::before {
+  background-image:url("/images/decorative-images/catalog-quadcopter.svg");
+}
+
+.modal-window {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #F0F0F0;
+  border: none;
+}
+
+.about-delivery-list-item {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.contacts-info {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.address-details {
+  font-style: normal;
+}
+
+.address-phone-link {
+  font-style: normal;
+  color: inherit;
+}
+
+.subscription {
+  background-color: #F0F0F0;
+}
+
+.subscription-input::placeholder {
+  font-family: "Rubik", "Arial", sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.subscription-input::-webkit-input-placeholder {
+  font-family: "Rubik", "Arial", sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.subscription-input::-moz-placeholder {
+  font-family: "Rubik", "Arial", sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.subscription-input::-ms-input-placeholder {
+  font-family: "Rubik", "Arial", sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.subscription-button {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.page-footer {
+  background-color: #444444;
+}
+
+.address-details,
+.footer-phone-link,
+.breadcrumb-link {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.footer-phone-link {
+  line-height: 20px;
+}
+
+.social-item-link {
+  text-decoration: none;
+}
+
+.footer-nav-link {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.main-inner {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.breadcrumb-link,
+.label-choice {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.filter,
+.sort,
+.product-pagination {
+  background-color: #F0F0F0;
+}
+
+.filter-title,
+.sort-title,
+.product-show-more,
+.back,
+.forward {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+legend.filter-title {
+  width:200px;
+  border-top:2px solid #000000;
+}
+
+fieldset.filter {
+  border: none;
+}
+
+.filter-title,
+.product-card-title{
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+.sort-select {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: inherit;
+  border: none;
+}
+
+.product-card-link {
+  text-decoration: none;
+}
+
+.product-card-title {
+  color: #000000;
+  text-transform: inherit;
+}
+
+.product-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.pagination-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.back,
+.forward {
+  font-size: 18px;
+  line-height: 21px;
+  opacity: 1;
+  color: #000000;
 }
