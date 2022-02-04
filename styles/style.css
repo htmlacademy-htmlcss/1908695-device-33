@@ -30,7 +30,15 @@
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -53,8 +61,34 @@ body {
   overflow: hidden;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
 .page-header {
+  position: relative;
+  padding-top: 46px;
+  margin-top: 29px;
   background-color: #FFE17F;
+}
+
+.navigation {
+  width: 1040px;
+  margin: 0 auto;
+}
+.logo {
+  position: absolute;
+  left: 60px;
+  top:-18px;
+}
+.nav-user-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  width: 517px;
+  margin-right: 26px;
 }
 
 .search-form-input::placeholder,
@@ -100,6 +134,24 @@ body {
   list-style-type: none;
 }
 
+.nav-main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-main-catalog {
+  width: 293px;
+}
+
+.nav-main-other {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 471px;
+  max-width: 598px;
+}
+
 .user-nav-link {
   font-size: 16px;
   line-height: 20px;
@@ -137,6 +189,10 @@ body {
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .promo-list-item-photo {
@@ -184,9 +240,15 @@ b.promo-list-item-description,
   font-size: 16px;
 }
 
+.catalog-list-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .catalog-list-item {
   padding-top: 180px;
   margin-bottom: 10px;
+  width: 160px;
 }
 
 .catalog-list-item-link {
@@ -238,6 +300,9 @@ b.promo-list-item-description,
 .quadcopters::before {
   background-image:url("/images/decorative-images/catalog-quadcopter.svg");
 }
+.service {
+  background-color: #F0F0F0;
+}
 
 .modal-window {
   font-family: "Raleway", "Arial", sans-serif;
@@ -253,6 +318,18 @@ b.promo-list-item-description,
   border: none;
 }
 
+.about-and-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 520px;
+}
+
+.contacts {
+  width: 532px;
+}
 .about-delivery-list-item {
   font-weight: 700;
   line-height: 20px;
@@ -278,6 +355,20 @@ b.promo-list-item-description,
   background-color: #F0F0F0;
 }
 
+.subscription-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subscription-title {
+  width: 348px;
+  margin: 0;
+}
+
+.subscription-description {
+  width: 560px;
+  margin: 0;
+}
 .subscription-input::placeholder {
   font-family: "Rubik", "Arial", sans-serif;;
   font-style: normal;
@@ -335,7 +426,24 @@ b.promo-list-item-description,
 .page-footer {
   background-color: #444444;
 }
+.page-footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 
+.footer-address {
+  width: 239px;
+  margin-right: 112px;
+}
+
+.footer-nav-and-social {
+  width: 444px;
+  margin-right: 190px;
+}
+
+.footer-phone {
+  width: 175px;
+}
 .address-details,
 .footer-phone-link,
 .breadcrumb-link {
