@@ -195,8 +195,18 @@ body {
   flex-grow: 1;
 }
 
+.promo-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .promo-list-item-photo {
+  width: calc(50% - 40px);
   text-decoration: none;
+}
+
+.promo-list-item-description{
+  width: calc(50% - 40px);
 }
 
 b.promo-list-item-description,
@@ -300,11 +310,28 @@ b.promo-list-item-description,
 .quadcopters::before {
   background-image:url("/images/decorative-images/catalog-quadcopter.svg");
 }
+
 .service {
   background-color: #F0F0F0;
 }
 
+.service-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-service {
+  width: 280px;
+  border-right: 7px solid #000000;
+}
+
+.service-content {
+  width: 693px;
+  padding: 73px 63px 73px 116px;
+}
+
 .modal-window {
+  width:100%;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -321,6 +348,7 @@ b.promo-list-item-description,
 .about-and-contacts {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .about {
@@ -478,6 +506,23 @@ b.promo-list-item-description,
   background-color: #FFFFFF;
 }
 
+.inner-header-container{
+  width: 1079px;
+  margin: 0 auto;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  margin-right: 36px;
+}
+
+.breadcrumb-item:last-child {
+  margin-right: 0;
+}
 .breadcrumb-link,
 .label-choice {
   font-size: 16px;
@@ -486,12 +531,29 @@ b.promo-list-item-description,
   text-decoration: none;
 }
 
-.filter,
-.sort,
-.product-pagination {
+.catalog-content-wrapper {
   background-color: #F0F0F0;
 }
 
+.catalog-content {
+  display: grid;
+  grid-template-columns: 320px 840px;
+  grid-template-areas: "filter sort"
+                        "filter products"
+                        "filter product-pagination";
+}
+
+.filter {
+  grid-area: filter;
+}
+
+.sort {
+  grid-area: sort;
+}
+
+.product-pagination {
+  grid-area: product-pagination;
+}
 .filter-title,
 .sort-title,
 .product-show-more,
@@ -533,6 +595,19 @@ fieldset.filter {
   line-height: 30px;
   background-color: inherit;
   border: none;
+}
+
+.product-list {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  column-gap: 40px;
+  padding: 70px 0 0 40px;
+  background-color: #FFFFFF;
+}
+
+.product-card {
+  margin-bottom: 44px;
 }
 
 .product-card-link {
