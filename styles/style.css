@@ -551,6 +551,10 @@ b.promo-list-item-description,
   grid-area: sort;
 }
 
+.products {
+  grid-area: products;
+}
+
 .product-pagination {
   grid-area: product-pagination;
 }
@@ -598,10 +602,10 @@ fieldset.filter {
 }
 
 .product-list {
-  grid-area: products;
   display: grid;
   grid-template-columns: repeat(auto-fill, 360px);
   column-gap: 40px;
+  width: 800px;
   padding: 70px 0 0 40px;
   background-color: #FFFFFF;
 }
