@@ -17,9 +17,8 @@
     </a>
     <div class="nav-user-wrapper">
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="search-label">
-          <input class="search-form-input" type="search" name="search" placeholder="Текст поиска">
-        </label>
+        <label for="search-form-input" class="search-label"></label>
+        <input class="search-form-input" id="search-form-input" type="search" name="search" placeholder="Текст поиска">
         <button class="search-button" type="submit">Найти</button>
       </form>
       <ul class="nav-user">
@@ -39,26 +38,32 @@
         <li class="nav-main-item">
           <label class="nav-main-link" for="main-subnav">Каталог товаров</label>
           <input class="nav-main-subnav-opener" id="main-subnav" type="checkbox" name="nav-main-subnav">
-          <ul class="nav-main-subnav">
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="catalog-monopods.html">Моноподы для селфи</a>
-            </li>
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="#">Умные часы</a>
-            </li>
-            <li class="nav-main-subnav-item">
-              <a class="nav-main-subnav-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
+          <div class="nav-main-subnav-wrapper">
+            <ul class="nav-main-subnav wide">
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="catalog-monopods.html">Моноподы для селфи</a>
+              </li>
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="nav-main-subnav">
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="nav-main-subnav">
+              <li class="nav-main-subnav-item">
+                <a class="nav-main-subnav-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
       <ul class="nav-main nav-main-other">
@@ -88,16 +93,20 @@
            <b class="promo-list-item-description">Порхает как бабочка, жалит как пчела!</b>
            <p class="promo-list-item-description">Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
              замаскированным под стандартную камеру</p>
-           <a class="promo-list-item-details btn" href="#">Подробнее</a>
-           <button class="promo-list-pagination current-pagintion">
-             <span class="visually-hidden">текущий слайд</span>
-           </button>
-           <button class="promo-list-pagination">
-             <span class="visually-hidden">следующий слайд</span>
-           </button>
-           <button class="promo-list-pagination">
-             <span class="visually-hidden">следующий слайд</span>
-           </button>
+           <div class="details-pagination-wrapper">
+             <a class="promo-list-item-details btn" href="#">Подробнее</a>
+             <div class="pagination-wrapper">
+               <button class="promo-list-pagination current-pagintion">
+                 <span class="visually-hidden">текущий слайд</span>
+               </button>
+               <button class="promo-list-pagination">
+                 <span class="visually-hidden">следующий слайд</span>
+               </button>
+               <button class="promo-list-pagination">
+                 <span class="visually-hidden">следующий слайд</span>
+               </button>
+             </div>
+           </div>
            <table class="promo-list-item-features">
              <tr class="promo-list-item-table-row">
                <td class="promo-list-item-table-data">800&nbsp;м</td>
@@ -118,16 +127,20 @@
            <b class="promo-list-item-description">Худеем правильно!</b>
            <p class="promo-list-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
              занятия и соблюдать диету.</p>
-           <a class="promo-list-item-details btn" href="#">Подробнее</a>
-           <button class="promo-list-pagination">
-             <span class="visually-hidden">предыдущий слайд</span>
-           </button>
-           <button class="promo-list-pagination current-pagintion">
-             <span class="visually-hidden">текущий слайд</span>
-           </button>
-           <button class="promo-list-pagination">
-             <span class="visually-hidden">следующий слайд</span>
-           </button>
+           <div class="details-pagination-wrapper">
+             <a class="promo-list-item-details btn" href="#">Подробнее</a>
+             <div class="pagination-wrapper">
+               <button class="promo-list-pagination">
+                 <span class="visually-hidden">предыдущий слайд</span>
+               </button>
+               <button class="promo-list-pagination current-pagintion">
+                 <span class="visually-hidden">текущий слайд</span>
+               </button>
+               <button class="promo-list-pagination">
+                 <span class="visually-hidden">следующий слайд</span>
+               </button>
+             </div>
+           </div>
            <table class="promo-list-item-features">
              <tr class="promo-list-item-table-row">
                <td class="promo-list-item-table-data">48 часов</td>
@@ -146,16 +159,20 @@
           <b class="promo-list-item-description">Делай селфи, как Бен Стиллер!</b>
           <p class="promo-list-item-description">Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь,
             Карл!) метров длиной и весом всего 5 кг.</p>
-          <a class="promo-list-item-details btn" href="#">Подробнее</a>
-          <button class="promo-list-pagination">
-            <span class="visually-hidden">предыдущий слайд</span>
-          </button>
-          <button class="promo-list-pagination">
-            <span class="visually-hidden">предыдущий слайд</span>
-          </button>
-          <button class="promo-list-pagination current-pagintion">
-            <span class="visually-hidden">текущий слайд</span>
-          </button>
+          <div class="details-pagination-wrapper">
+            <a class="promo-list-item-details btn" href="#">Подробнее</a>
+            <div class="pagination-wrapper">
+              <button class="promo-list-pagination">
+                <span class="visually-hidden">предыдущий слайд</span>
+              </button>
+              <button class="promo-list-pagination">
+                <span class="visually-hidden">предыдущий слайд</span>
+              </button>
+              <button class="promo-list-pagination current-pagintion">
+                <span class="visually-hidden">текущий слайд</span>
+              </button>
+            </div>
+          </div>
           <table class="promo-list-item-features">
             <tr class="promo-list-item-table-row">
               <td class="promo-list-item-table-data">8,5&nbsp;кг</td>
@@ -278,7 +295,7 @@
        <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.
        </p>
        <b class="contacts-info">Интернет-магазин «Девайс»</b>
-       <address>
+       <address class="contacts-address">
          <p class="address-details">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
          <a class="address-phone-link" href="tel:+78128121212">+7(812) 812-12-12</a>
        </address>
@@ -303,13 +320,14 @@
          <p class="subscription-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
          распаковками, а также акции, спецпредложения и вот это вот всё.</p>
        </div>
-       <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
-         <label class="subscription-label">
-           <input class="subscription-input" type="email" name="email" placeholder="Ваш e-mail">
-         </label>
-         <button class="subscription-button" type="submit">Подписаться</button>
+       <div class="subscription-form-wrapper">
+         <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+           <label for="subscription-input" class="subscription-label"></label>
+           <input class="subscription-input" id="subscription-input" type="email" name="email" placeholder="Ваш e-mail">
+           <button class="subscription-button btn" type="submit">Подписаться</button>
+         </form>
          <span class="subscription">Это бесплатно</span>
-       </form>
+     </div>
      </div>
    </section>
  </main>
