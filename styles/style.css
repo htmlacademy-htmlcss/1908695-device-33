@@ -878,6 +878,7 @@ legend.filter-title {
 }
 
 fieldset.filter {
+  padding: 0;
   border: none;
 }
 
