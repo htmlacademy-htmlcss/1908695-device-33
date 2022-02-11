@@ -10,16 +10,15 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="page-header container">
+  <header class="page-header page-header-inner container">
     <nav class="navigation">
       <a class="logo" href="index.html" title="на главную">
         <img class="logo-photo" src="/images/content-images/logo-header.svg" height="37" width="145" alt="Логотип компании Девайс">
       </a>
       <div class="nav-user-wrapper">
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label class="search-label">
-            <input class="search-form-input" type="search" name="search" placeholder="Текст поиска">
-          </label>
+          <label for="search-form-input" class="search-label"></label>
+          <input class="search-form-input" id="search-form-input" type="search" name="search" placeholder="Текст поиска">
           <button class="search-button" type="submit">Найти</button>
         </form>
         <ul class="nav-user">
@@ -27,7 +26,7 @@
             <a class="user-nav-link" href="#">Коля Петухов</a>
           </li>
           <li class="nav-user-item">
-            <a class="user-nav-link" href="#">Выйти</a>
+            <a class="user-nav-link logout" href="#">Выйти</a>
           </li>
           <li class="nav-user-item">
             <a class="user-nav-link" href="#">Сравнить</a>
@@ -42,26 +41,32 @@
           <li class="nav-main-item">
             <label class="nav-main-link" for="main-subnav">Каталог товаров</label>
             <input class="nav-main-subnav-opener" id="main-subnav" type="checkbox" name="nav-main-subnav">
-            <ul class="nav-main-subnav">
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link">Моноподы для селфи</a>
-              </li>
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link" href="#">Умные часы</a>
-              </li>
-              <li class="nav-main-subnav-item">
-                <a class="nav-main-subnav-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+            <div class="nav-main-subnav-wrapper">
+              <ul class="nav-main-subnav wide">
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link">Моноподы для селфи</a>
+                </li>
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="nav-main-subnav">
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="nav-main-subnav">
+                <li class="nav-main-subnav-item">
+                  <a class="nav-main-subnav-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
            </li>
         </ul>
         <ul class="nav-main nav-main-other">
@@ -98,7 +103,7 @@
    <div class="catalog-content-wrapper">
      <div class="container catalog-content">
        <section class="filter">
-         <h2 class="filter-title">Фильтр:</h2>
+         <h2 class="filter-title-main">Фильтр:</h2>
          <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
            <fieldset class="filter">
              <legend class="filter-title">Стоимость</legend>
@@ -153,18 +158,19 @@
                </li>
              </ul>
            </fieldset>
-           <button class="btn" type="submit">Показать</button>
+           <button class="btn filter-show" type="submit">Показать</button>
          </form>
        </section>
        <section class="sort">
          <h2 class="sort-title">Сортировка:</h2>
-         <form class="sort" action="https://echo.htmlacademy.ru/" method="get">
+         <form class="sort-form" action="https://echo.htmlacademy.ru/" method="get">
            <label>
              <select class="sort-select">
                <option value="popular">Популярные</option>
              </select>
            </label>
          </form>
+         <span class="sort-selector" aria-label="прокрутка сортировки"></span>
        </section>
        <section class="products">
          <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
@@ -206,29 +212,35 @@
        <section class="product-pagination">
          <h2 class="visually-hidden">Загрузка предыдущих и последующих страниц каталога</h2>
          <button class="product-show-more" type="button">Загрузить еще</button>
-         <ul class="pagination">
-           <li class="pagination-item">
-             <a class="pagination-link back" href="#">Назад</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link" href="#">1</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link" href="#">2</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link" href="#">3</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link" href="#">...</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link" href="#">15</a>
-           </li>
-           <li class="pagination-item">
-             <a class="pagination-link forward" href="#">Вперед</a>
-           </li>
-         </ul>
+         <div class="pagination">
+           <ul class="pagination-wrapper">
+             <li class="pagination-item">
+               <a class="pagination-link back" href="#">Назад</a>
+             </li>
+           </ul>
+           <ul class="pagination-wrapper numbers">
+             <li class="pagination-item">
+               <a class="pagination-link" href="#">1</a>
+             </li>
+             <li class="pagination-item">
+               <a class="pagination-link" href="#">2</a>
+             </li>
+             <li class="pagination-item">
+               <a class="pagination-link" href="#">3</a>
+             </li>
+             <li class="pagination-item">
+               <a class="pagination-link" href="#">...</a>
+             </li>
+             <li class="pagination-item">
+               <a class="pagination-link" href="#">15</a>
+             </li>
+           </ul>
+           <ul class="pagination-wrapper">
+             <li class="pagination-item">
+               <a class="pagination-link forward" href="#">Вперед</a>
+             </li>
+           </ul>
+         </div>
        </section>
      </div>
    </div>
