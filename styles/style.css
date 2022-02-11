@@ -259,8 +259,7 @@ label.nav-main-link::after {
   height: 50px;
   margin-left: 10px;
   content: "";
-  background: url("/images/decorative-images/plus-pic.svg");
-  background-repeat: no-repeat;
+  background: url("/images/decorative-images/plus-pic.svg") no-repeat;
 }
 
 .nav-main-subnav-opener:checked ~ .nav-main-subnav-wrapper {
@@ -374,6 +373,7 @@ p.promo-list-item-description {
 .promo-list-item-features {
   border-spacing: 20px 0;
 }
+
 .current {
   width: 280px;
   text-align: left;
