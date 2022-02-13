@@ -277,15 +277,16 @@ label.nav-main-link::after {
   padding: 33px 425px 27px 60px;
 }
 
-.nav-main-subnav-opener:checked ~ .nav-main-subnav-wrapper::before {
+.nav-main-subnav-opener:checked ~ label.nav-main-link::before {
   position: absolute;
   content: "";
   width: 50px;
   height: 50px;
-  top:-41px;
-  left: 296px;
-  background: url("/images/decorative-images/minus-pic.svg");
+  top:-14.5px;
+  left: 236px;
+  background: url("/images/decorative-images/minus-pic.svg") no-repeat;
   opacity: 0.3;
+  z-index: 2;
 }
 
 .nav-main-subnav {
