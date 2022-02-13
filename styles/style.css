@@ -227,6 +227,7 @@ body {
 }
 
 .nav-main-subnav-wrapper {
+  position: relative;
   display: none;
   background-color:#FFE17F;
 }
@@ -262,6 +263,10 @@ label.nav-main-link::after {
   background: url("/images/decorative-images/plus-pic.svg") no-repeat;
 }
 
+.nav-main-subnav-opener:checked ~ label.nav-main-link::after {
+  display: none;
+}
+
 .nav-main-subnav-opener:checked ~ .nav-main-subnav-wrapper {
   position: absolute;
   top: 31px;
@@ -270,6 +275,17 @@ label.nav-main-link::after {
   box-sizing: border-box;
   width: 1160px;
   padding: 33px 425px 27px 60px;
+}
+
+.nav-main-subnav-opener:checked ~ .nav-main-subnav-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top:-41px;
+  left: 296px;
+  background: url("/images/decorative-images/minus-pic.svg");
+  opacity: 0.3;
 }
 
 .nav-main-subnav {
@@ -313,12 +329,17 @@ label.nav-main-link::after {
 }
 
 .promo-list-item-photo {
+  position: relative;
+  /*top:-150px;*/
   width: 560px;
   text-decoration: none;
+  margin-top: -150px;
 }
 
-.promo-list-item-description {
+.promo-list-item-description-wrapper {
+  position: relative;
   width: 560px;
+  margin-top: -30px;
 }
 
 b.promo-list-item-description,
@@ -326,7 +347,8 @@ b.promo-list-item-description,
 .about-title,
 .contacts-title,
 .subscription-title,
-.inner-header-title {
+.inner-header-title,
+.modal-window-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -551,9 +573,9 @@ p.promo-list-item-description {
   margin: 0;
   font-family: inherit;
   font-style: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
 }
 
 .about-description,
@@ -818,6 +840,7 @@ span.subscription {
   grid-template-areas: "filter sort"
                         "filter products"
                         "filter product-pagination";
+  min-height: 100vh;
 }
 
 section.filter {
@@ -920,16 +943,26 @@ legend.filter-title {
   margin-bottom: 44px;
 }
 
+.product-card-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .product-card-link {
+  display: block;
+  margin-bottom: 32px;
   text-decoration: none;
 }
 
 .product-card-title {
+  max-width: 226px;
+  margin: 0;
   color: #000000;
   text-transform: inherit;
 }
 
 .product-card-price {
+  align-self: flex-start;
   font-size: 18px;
   line-height: 21px;
   color: #444444;
@@ -970,4 +1003,18 @@ legend.filter-title {
   padding: 25px;
   color: #000000;
   opacity: 1;
+}
+
+.modal-window-container {
+  width: 920px;
+  margin: 0 auto;
+  padding: 42px 80px;
+  box-sizing: border-box;
+  border: 10px solid #000000;;
+}
+
+.modal-window-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 42px;
 }
