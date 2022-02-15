@@ -385,6 +385,7 @@ p.promo-list-item-description {
   color: #000000;
   text-decoration: none;
   border: none;
+  background-color: transparent;
 }
 
 .promo-list-item-details {
@@ -912,7 +913,8 @@ fieldset.filter {
 }
 
 .product-card-title,
-legend.filter-title {
+legend.filter-title,
+form.modal-window-form {
   font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -933,26 +935,41 @@ legend.filter-title {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 360px);
+  grid-template-columns: repeat(auto-fit, 360px);
   column-gap: 40px;
+  row-gap: 44px;
   width: 760px;
   padding: 70px 40px 0 40px;
   background-color: #FFFFFF;
 }
 
 .product-card {
-  margin-bottom: 44px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .product-card-info-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: auto;
 }
+
 .product-card-link {
   display: block;
-  margin-bottom: 32px;
   text-decoration: none;
+}
+
+.link-img {
+  margin-bottom: 32px;
+}
+
+.product-card-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .product-card-title {
@@ -1007,15 +1024,77 @@ legend.filter-title {
 }
 
 .modal-window-container {
-  width: 920px;
+  width: 760px;
   margin: 0 auto;
   padding: 42px 80px;
-  box-sizing: border-box;
-  border: 10px solid #000000;;
+  border: 10px solid #000000;
 }
 
 .modal-window-title {
   text-align: center;
   margin-top: 0;
   margin-bottom: 42px;
+}
+
+form.modal-window-form {
+  width: 760px;
+  color: #000000;
+  text-transform: inherit;
+}
+
+.modal-window-form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+  row-gap: 62px;
+  grid-template-areas:
+                      "name name email email"
+                       "message message message quantity";
+  align-items: stretch;
+  margin-bottom: 42px;
+  box-sizing: border-box;
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.message {
+  grid-area: message;
+}
+
+.quantity {
+  grid-area: quantity;
+}
+
+.modal-window-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #F0F0F0;
+  border: none;
+}
+
+.warning {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF3D3D;
+}
+
+.delivery-form-btn,
+.modal-window-title {
+  padding: 0;
+  text-align: left;
+}
+
+.modal-window-label {
+  display: block;
+  margin-bottom: 14px;
 }
