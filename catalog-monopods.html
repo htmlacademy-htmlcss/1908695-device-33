@@ -39,8 +39,8 @@
       <div class="nav-main-wrapper">
         <ul class="nav-main nav-main-catalog">
           <li class="nav-main-item">
-            <label class="nav-main-link" for="main-subnav">Каталог товаров</label>
             <input class="nav-main-subnav-opener" id="main-subnav" type="checkbox" name="nav-main-subnav">
+            <label class="nav-main-link" for="main-subnav">Каталог товаров</label>
             <div class="nav-main-subnav-wrapper">
               <ul class="nav-main-subnav wide">
                 <li class="nav-main-subnav-item">
@@ -50,12 +50,12 @@
                   <a class="nav-main-subnav-link">Моноподы для селфи</a>
                 </li>
                 <li class="nav-main-subnav-item">
-                  <a class="nav-main-subnav-link" href="#">Экшн-камеры</a>
+                  <a class="nav-main-subnav-link" href="#"><nobr>Экшн-камеры</nobr></a>
                 </li>
               </ul>
               <ul class="nav-main-subnav">
                 <li class="nav-main-subnav-item">
-                  <a class="nav-main-subnav-link" href="#">Фитнес-браслеты</a>
+                  <a class="nav-main-subnav-link" href="#"><nobr>Фитнес-браслеты</nobr></a>
                 </li>
                 <li class="nav-main-subnav-item">
                   <a class="nav-main-subnav-link" href="#">Умные часы</a>
@@ -165,8 +165,11 @@
          <h2 class="sort-title">Сортировка:</h2>
          <form class="sort-form" action="https://echo.htmlacademy.ru/" method="get">
            <label>
-             <select class="sort-select">
+             <select class="sort-select" aria-label="Сортировка">
                <option value="popular">Популярные</option>
+               <option value="popular">Максимальная скидка</option>
+               <option value="popular">По убыванию цены</option>
+               <option value="popular">По возрастанию цены</option>
              </select>
            </label>
          </form>
@@ -176,36 +179,52 @@
          <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
          <ul class="product-list">
            <li class="product-card">
-             <a class="product-card-link" href="#">
+             <a class="product-card-link link-img" href="#">
                <img class="product-card-image" src="/images/content-images/product-selfie-amateur.jpg" height="380"
                     width="360" alt="Любительская селфи-палка">
-               <h3 class="product-card-title">Любительская селфи-палка</h3>
              </a>
-             <span class="product-card-price">500&nbsp;&#8381;</span>
+             <div class="product-card-info-wrapper">
+               <a class="product-card-link" href="#">
+               <h3 class="product-card-title">Любительская <nobr>селфи-палка</nobr></h3>
+             </a>
+               <span class="product-card-price">500&nbsp;&#8381;</span>
+             </div>
            </li>
            <li class="product-card">
-             <a class="product-card-link" href="#">
+             <a class="product-card-link link-img" href="#">
                <img class="product-card-image" src="/images/content-images/product-selfie-prof.jpg" height="380"
                     width="360" alt="Профессиональная селфи-палка">
-               <h3 class="product-card-title">Профессиональная селфи-палка</h3>
              </a>
-             <span class="product-card-price">1&nbsp;500&nbsp;&#8381;</span>
+             <div class="product-card-info-wrapper">
+               <a class="product-card-link" href="#">
+               <h3 class="product-card-title">Профессиональная <nobr>селфи-палка</nobr></h3>
+             </a>
+               <span class="product-card-price">1&nbsp;500&nbsp;&#8381;</span>
+             </div>
            </li>
            <li class="product-card">
-             <a class="product-card-link" href="#">
+             <a class="product-card-link link-img" href="#">
                <img class="product-card-image" src="/images/content-images/product-selfie-unsink.jpg" height="380"
                     width="360" alt="Непотопляемая селфи-палка">
-               <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
              </a>
-             <span class="product-card-price">2&nbsp;500&nbsp;&#8381;</span>
+             <div class="product-card-info-wrapper">
+               <a class="product-card-link" href="#">
+               <h3 class="product-card-title">Непотопляемая <nobr>селфи-палка</nobr></h3>
+             </a>
+               <span class="product-card-price">2&nbsp;500&nbsp;&#8381;</span>
+             </div>
            </li>
            <li class="product-card">
-             <a class="product-card-link" href="#">
+             <a class="product-card-link link-img" href="#">
                <img class="product-card-image" src="/images/content-images/product-selfie-followme.jpg" height="380"
                     width="360" alt="Селфи-палка Следуй за мной">
-               <h3 class="product-card-title">Селфи-палка "Следуй за мной"</h3>
              </a>
-             <span class="product-card-price">1&nbsp;500&nbsp;&#8381;</span>
+             <div class="product-card-info-wrapper">
+               <a class="product-card-link" href="#">
+               <h3 class="product-card-title"><nobr>Селфи-палка</nobr> &laquo;Следуй за мной&raquo;</h3>
+             </a>
+               <span class="product-card-price">1&nbsp;500&nbsp;&#8381;</span>
+             </div>
            </li>
          </ul>
        </section>
@@ -254,7 +273,8 @@
               alt="Логотип компании Девайс">
        </a>
        <address class="footer-address">
-         <p class="address-details">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+         <p class="address-details"><nobr>Санкт-Петербург,</nobr> набережная <nobr>реки Карповки, 5,</nobr>
+           <nobr>литера П.</nobr></p>
        </address>
      </section>
      <section class="footer-nav-and-social">
