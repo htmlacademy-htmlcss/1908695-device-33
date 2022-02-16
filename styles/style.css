@@ -70,7 +70,7 @@ body {
   position: relative;
   padding-top: 46px;
   padding-bottom: 180px;
-  margin-top: 29px;
+  margin-top: 35px;
   background-color: #FFE17F;
 }
 
@@ -97,7 +97,6 @@ body {
   max-width: 1040px;
   margin-bottom: 30px;
   box-sizing: border-box;
-
 }
 
 .search-form {
@@ -279,6 +278,7 @@ label.nav-main-link::after {
 
 .nav-main-subnav-opener:checked ~ label.nav-main-link::before {
   position: absolute;
+  z-index: 2;
   content: "";
   width: 50px;
   height: 50px;
@@ -286,7 +286,6 @@ label.nav-main-link::after {
   left: 236px;
   background: url("/images/decorative-images/minus-pic.svg") no-repeat;
   opacity: 0.3;
-  z-index: 2;
 }
 
 .nav-main-subnav {
@@ -331,7 +330,6 @@ label.nav-main-link::after {
 
 .promo-list-item-photo {
   position: relative;
-  /*top:-150px;*/
   width: 560px;
   text-decoration: none;
   margin-top: -150px;
@@ -395,7 +393,7 @@ p.promo-list-item-description {
 }
 
 .promo-list-item-features {
-  border-spacing: 20px 0;
+  border-spacing: 20px 12px;
 }
 
 .current {
@@ -946,7 +944,6 @@ form.modal-window-form {
 .product-card {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .product-card-info-wrapper {
@@ -954,6 +951,7 @@ form.modal-window-form {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-grow: 1;
   margin-top: auto;
 }
 
@@ -1031,28 +1029,37 @@ form.modal-window-form {
 }
 
 .modal-window-title {
-  text-align: center;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin-top: 0;
   margin-bottom: 42px;
 }
 
-form.modal-window-form {
-  width: 760px;
-  color: #000000;
-  text-transform: inherit;
+.modal-window-title::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("/images/decorative-images/cross.svg") no-repeat 50% 50%;
 }
 
-.modal-window-form-wrapper {
+form.modal-window-form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 40px;
   row-gap: 62px;
   grid-template-areas:
                       "name name email email"
-                       "message message message quantity";
+                       "message message message quantity"
+                       "btn btn btn btn";
   align-items: stretch;
+  width: 760px;
   margin-bottom: 42px;
   box-sizing: border-box;
+  color: #000000;
+  text-transform: inherit;
 }
 
 .name {
@@ -1071,21 +1078,73 @@ form.modal-window-form {
   grid-area: quantity;
 }
 
+.delivery-form-btn {
+  grid-area: btn;
+  justify-self: start;
+}
+
+.name,
+.email,
+.quantity,
+.message {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.modal-window-input,
+.modal-window-input::placeholder {
+  font-family: "Rubik", Arial, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.3;
+}
+
 .modal-window-input {
   display: block;
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  opacity: 1;
   background-color: #F0F0F0;
   border: none;
 }
 
-.warning {
+.user-email-input {
+  border: 2px solid #FF3D3D;
+}
+
+.warning,
+.name-enter {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #FF3D3D;
+}
+
+.name-enter {
+  color: #000000;
+}
+
+input.quantity {
+  padding: 20px 60px;
+}
+
+.quantity > .modal-window-label {
+  position: relative;
+}
+
+.quantity-info {
+  position: absolute;
+  top:-4px;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  background: url("/images/decorative-images/quantity-info.svg") no-repeat;
+  border: none;
 }
 
 .delivery-form-btn,

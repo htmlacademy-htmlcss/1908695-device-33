@@ -14,14 +14,14 @@
 <div class="modal-window-container">
   <h2 class="modal-window-title">Доставка под заказ</h2>
   <form class="modal-window-form" action="https://echo.htmlacademy.ru" method="post">
-    <div class="modal-window-form-wrapper">
       <div class="name">
         <label class="modal-window-label" for="username">Ваше имя:</label>
         <input class="user-name-input modal-window-input" id="username" type="text" placeholder="Введите имя">
+        <p class="name-enter">Добавьте имя</p>
       </div>
       <div class="email">
         <label class="modal-window-label" for="email">Ваш e-mail:</label>
-        <input class="user-name-email modal-window-input" id="email" type="email" placeholder="Введите почту"
+        <input class="user-email-input modal-window-input" id="email" type="email" placeholder="Введите почту"
                value="почта">
         <p class="warning">Забавный у вас адрес</p>
       </div>
@@ -30,10 +30,13 @@
         <textarea class="user-message modal-window-input" id="message" placeholder="В свободной форме" rows="1"></textarea>
       </div>
       <div class="quantity">
-        <label class="modal-window-label" for="quantity">Количество</label>
+        <label class="modal-window-label" for="quantity">Количество:
+        <button class="quantity-info">
+          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+        </button>
+        </label>
         <input class="quantity modal-window-input" id="quantity" type="number" min="1" max="100" step="1">
       </div>
-    </div>
     <button class="delivery-form-btn btn" type="submit">Отправить</button>
   </form>
 </div>
