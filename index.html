@@ -26,10 +26,10 @@
           <a class="user-nav-link login" href="#">Войти</a>
         </li>
         <li class="nav-user-item">
-          <a class="user-nav-link" href="#">Сравнить</a>
+          <a class="user-nav-link compare" href="#">Сравнить</a>
         </li>
         <li class="nav-user-item">
-          <a class="user-nav-link" href="#">Корзина</a>
+          <a class="user-nav-link basket" href="#">Корзина</a>
         </li>
       </ul>
     </div>
@@ -86,9 +86,17 @@
      <h2 class="visually-hidden">Промотовары</h2>
      <ul class="promo-list">
        <li class="promo-list-item">
-         <a class="promo-list-item-photo" href="#">
-           <img src="/images/content-images/slider-quadcopter.png" height="560" width="560" alt="Квадракоптер">
-         </a>
+         <div class="promo-list-item-photo-wrapper">
+           <button class="promo-list-photo-back photo-pagination">
+             <span class="visually-hidden">назад</span>
+           </button>
+           <a class="promo-list-item-photo" href="#">
+             <img src="/images/content-images/slider-quadcopter.png" height="560" width="560" alt="Квадракоптер">
+           </a>
+           <button class="promo-list-photo-forward photo-pagination">
+             <span class="visually-hidden">вперед</span>
+           </button>
+         </div>
          <div class="promo-list-item-description-wrapper">
            <b class="promo-list-item-description">Порхает как бабочка, жалит как пчела!</b>
            <p class="promo-list-item-description">Это обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
@@ -96,7 +104,7 @@
            <div class="details-pagination-wrapper">
              <a class="promo-list-item-details btn" href="#">Подробнее</a>
              <div class="pagination-wrapper">
-               <button class="promo-list-pagination current-pagintion">
+               <button class="promo-list-pagination current-pagination">
                  <span class="visually-hidden">текущий слайд</span>
                </button>
                <button class="promo-list-pagination">
@@ -120,9 +128,17 @@
          </div>
        </li>
        <li class="promo-list-item">
+         <div class="promo-list-item-photo-wrapper">
+           <button class="promo-list-photo-back photo-pagination">
+             <span class="visually-hidden">назад</span>
+           </button>
         <a class="promo-list-item-photo" href="#">
           <img src="/images/content-images/slider-watch.png" height="560" width="560" alt="Фитнес-браслет">
         </a>
+           <button class="promo-list-photo-forward photo-pagination">
+             <span class="visually-hidden">вперед</span>
+           </button>
+         </div>
          <div class="promo-list-item-description-wrapper">
            <b class="promo-list-item-description">Худеем правильно!</b>
            <p class="promo-list-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
@@ -133,7 +149,7 @@
                <button class="promo-list-pagination">
                  <span class="visually-hidden">предыдущий слайд</span>
                </button>
-               <button class="promo-list-pagination current-pagintion">
+               <button class="promo-list-pagination current-pagination">
                  <span class="visually-hidden">текущий слайд</span>
                </button>
                <button class="promo-list-pagination">
@@ -152,9 +168,17 @@
          </div>
       </li>
       <li class="promo-list-item">
+        <div class="promo-list-item-photo-wrapper">
+          <button class="promo-list-photo-back photo-pagination">
+            <span class="visually-hidden">назад</span>
+          </button>
         <a class="promo-list-item-photo" href="#">
           <img src="images/content-images/slider-selfie-stick.png" height="560" width="560" alt="Палка для селфи">
         </a>
+          <button class="promo-list-photo-forward photo-pagination">
+            <span class="visually-hidden">вперед</span>
+          </button>
+        </div>
         <div class="promo-list-item-description-wrapper">
           <b class="promo-list-item-description">Делай селфи, как Бен Стиллер!</b>
           <p class="promo-list-item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
@@ -168,7 +192,7 @@
               <button class="promo-list-pagination">
                 <span class="visually-hidden">предыдущий слайд</span>
               </button>
-              <button class="promo-list-pagination current-pagintion">
+              <button class="promo-list-pagination current-pagination">
                 <span class="visually-hidden">текущий слайд</span>
               </button>
             </div>
@@ -227,11 +251,13 @@
              <button class="navigation-service-btn btn" type="button">Кредит</button>
            </li>
          </ul>
-         <section class="service-content">
-           <h3 class="service-content-title">Доставка</h3>
-           <p class="service-content-description">Мы с удовольствием доставим ваш товар прямо
-             к вашему подъезду совершенно бесплатно! Ведь
-             мы неплохо заработаем, поднимая его на ваш этаж.</p>
+         <section class="service-content  service-content-delivery">
+           <div class="service-content-wrapper-delivery">
+             <h3 class="service-content-title">Доставка</h3>
+             <p class="service-content-description">Мы с удовольствием доставим ваш товар прямо
+               к вашему подъезду совершенно бесплатно! Ведь
+               мы неплохо заработаем, поднимая его на ваш этаж.</p>
+           </div>
          </section>
        </div>
        <div class="service-container">
@@ -246,11 +272,16 @@
              <button class="navigation-service-btn btn" type="button">Кредит</button>
            </li>
          </ul>
-         <section class="service-content">
-           <h3 class="service-content-title">Гарантия</h3>
-           <p class="service-content-description">Если <nobr>из-за</nobr> возгорания купленного у нас товара у вас
-             сгорит дом&mdash;не переживайте, мы выдадим вам новый.
-             Товар, не дом, конечно же.</p>
+         <section class="service-content service-content-guarantee">
+           <div class="service-content-wrapper">
+             <h3 class="service-content-title">Гарантия</h3>
+             <p class="service-content-description">Если
+               <nobr>из-за</nobr>
+               возгорания купленного у нас товара у вас
+               сгорит дом&mdash;не переживайте, мы выдадим вам новый.
+               Товар, не дом, конечно же.
+             </p>
+           </div>
          </section>
        </div>
        <div class="service-container">
@@ -265,10 +296,12 @@
              <button class="navigation-service-btn btn current" type="button">Кредит</button>
            </li>
          </ul>
-         <section class="service-content">
-           <h3 class="service-content-title">Кредит</h3>
-           <p class="service-content-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут
-             для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+         <section class="service-content service-content-credit">
+           <div class="service-content-wrapper">
+             <h3 class="service-content-title">Кредит</h3>
+             <p class="service-content-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут
+               для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+           </div>
          </section>
        </div>
      </div>
@@ -341,7 +374,7 @@
               alt="Логотип компании Девайс">
        </a>
        <address class="footer-address">
-         <p class="address-details"><nobr>Санкт-Петербург,</nobr> набережная реки <nobr>Карповки, 5,</nobr>
+         <p class="address-details-footer"><nobr>Санкт-Петербург,</nobr> набережная реки <nobr>Карповки, 5,</nobr>
            <nobr>литера П.</nobr></p>
        </address>
      </section>
