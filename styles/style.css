@@ -100,6 +100,7 @@ body {
 }
 
 .search-form {
+  position: relative;
   display: inline-flex;
   width: 517px;
 }
@@ -119,6 +120,16 @@ body {
   border-radius: 50px 0 0 50px;
 }
 
+.search-form::before {
+  position: absolute;
+  content: "";
+  top:14px;
+  left: 16px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("/images/decorative-images/search-pic.svg") no-repeat 50% 50%;
+}
 .search-form-input::placeholder,
 .search-button {
   font-family: "Rubik", "Arial", sans-serif;
@@ -391,11 +402,41 @@ label.nav-main-link::after {
   background: url("/images/decorative-images/right-tall-arrow.svg") no-repeat 50% 50%;
 }
 
+.promo-list-item-description-wrapper::before {
+  position: absolute;
+  right: 0;
+  top:-47px;
+  z-index: -1;
+  display: block;
+  content: "";
+  min-width: 250px;
+  min-height: 135px;
+  font-weight: bold;
+  font-size: 180px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.promo-wrapper-first::before {
+  content: "01";
+}
+
+.promo-wrapper-second::before {
+  content: "02";
+}
+
+.promo-wrapper-third::before {
+  content: "03";
+}
+
 .promo-list-item-description-wrapper {
   position: relative;
+  z-index: 1;
   width: 560px;
   margin-top: -30px;
 }
+
+
 
 b.promo-list-item-description,
 .service-content-title,
@@ -449,7 +490,9 @@ p.promo-list-item-description {
 }
 
 .btn {
-  display: block;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -463,6 +506,20 @@ p.promo-list-item-description {
   background-color: transparent;
 }
 
+.btn::before {
+  position: absolute;
+  left:-5px;
+  z-index: -1;
+  content: "";
+  height: 8px;
+  width: calc(100% + 10px);
+  background-color: #FFE17F;
+}
+
+.btn.current::before {
+  position: absolute;
+  background-color: transparent;
+}
 .promo-list-item-details {
   min-width: 220px;
   padding: 10px 5px;
@@ -550,12 +607,26 @@ p.promo-list-item-description {
   background-image:url("/images/decorative-images/catalog-quadcopter.svg");
 }
 
-.service {
-  background-color: #F0F0F0;
+.service-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  padding-top: 72px;
+  margin-bottom: 20px;
 }
 
-.service-container {
-  display: flex;
+.service-container:last-child {
+  margin-bottom: 0;
+}
+.service-container::before {
+  position: absolute;
+  content: "";
+  top:175px;
+  left: 0;
+  z-index: -1;
+  min-width: 100vw;
+  height: 280px;
+  background-color: #F0F0F0;
 }
 
 .navigation-service {
@@ -636,6 +707,7 @@ p.promo-list-item-description {
   align-items: center;
   width:100%;
   padding: 0;
+  margin-top: 140px;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -672,7 +744,6 @@ p.promo-list-item-description {
 .about,
 .contacts {
   padding-top: 47px;
-  border-top: 7px solid #000000;
 }
 
 .about {
@@ -685,10 +756,22 @@ p.promo-list-item-description {
 
 .contacts-title,
 .about-title {
+  position: relative;
   margin-top: 0;
   margin-bottom: 48px;
 }
 
+.contacts-title::before,
+.about-title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -40px;
+  display: block;
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+}
 .address-details {
   margin: 0;
   font-family: inherit;
@@ -708,6 +791,10 @@ p.promo-list-item-description {
 }
 
 .about-delivery-list-item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 26px;
+  align-items: center;
   margin-bottom: 19px;
   font-weight: 700;
   line-height: 20px;
@@ -717,6 +804,14 @@ p.promo-list-item-description {
 
 .about-delivery-list-item:last-child {
   margin-bottom: 0;
+}
+
+.about-delivery-list-item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
 }
 
 .contacts-info {
@@ -1023,15 +1118,22 @@ section.filter {
   grid-area: sort;
   padding: 0 40px;
 }
-
-.sort-selector {
-  display: block;
-  content: "";
+.sort-button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*column-gap: 10px;*/
   width: 60px;
+}
+.sort-selector {
+  width: 30px;
   height: 30px;
-  background-color: tomato;
+  background: url("/images/decorative-images/sort-up.svg") no-repeat 50% 50%;
+  border: none;
 }
 
+.down {
+  transform: rotate(180deg);
+}
 .products {
   grid-area: products;
 }
