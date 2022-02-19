@@ -12,7 +12,12 @@
 </head>
 <body class="container">
 <div class="modal-window-container">
-  <h2 class="modal-window-title">Доставка под заказ</h2>
+  <header class="modal-window-header">
+    <h2 class="modal-window-title">Доставка под заказ</h2>
+    <button class="modal-window-header-button">
+      <span class="visually-hidden">кнопка закрытия модального окна</span>
+    </button>
+  </header>
   <form class="modal-window-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="name">
         <label class="modal-window-label" for="username">Ваше имя:</label>
@@ -34,7 +39,7 @@
           <span class="visually-hidden">Посмотреть дополнительную информацию</span>
         </button>
         </label>
-        <input class="quantity modal-window-input" id="quantity" type="number" min="1" max="100" step="1">
+        <input class="quantity modal-window-input" id="quantity" type="number" min="1" max="100" step="1" value="1">
       </div>
     <button class="delivery-form-btn btn" type="submit">Отправить</button>
   </form>

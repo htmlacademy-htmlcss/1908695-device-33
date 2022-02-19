@@ -491,8 +491,9 @@ p.promo-list-item-description {
 
 .btn {
   position: relative;
-  display: inline-block;
   z-index: 1;
+  display: block;
+  padding: 10px;
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -508,15 +509,17 @@ p.promo-list-item-description {
 
 .btn::before {
   position: absolute;
-  left:-5px;
   z-index: -1;
   content: "";
+  left: -5px;
   height: 8px;
   width: calc(100% + 10px);
   background-color: #FFE17F;
+  transform: translateY(90%);
 }
 
-.btn.current::before {
+.btn.current::before,
+.subscription-button::before {
   position: absolute;
   background-color: transparent;
 }
@@ -819,6 +822,12 @@ p.promo-list-item-description {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
+}
+
+.about-details-link,
+.contacts-write-link {
+  display: inline-block;
+  text-align: left;
 }
 
 .address-phone-link {
@@ -1292,14 +1301,25 @@ form.modal-window-form {
 }
 
 .modal-window-container {
+  position: relative;
   width: 760px;
   margin: 0 auto;
   padding: 42px 80px;
   border: 10px solid #000000;
 }
 
-.modal-window-title {
-  display: inline-flex;
+.modal-window-container::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: -10px;
+  display: block;
+  width: 930px;
+  border: 5px solid #E5E5E5;
+}
+
+.modal-window-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -1307,12 +1327,26 @@ form.modal-window-form {
   margin-bottom: 42px;
 }
 
-.modal-window-title::after {
-  content: "";
+.modal-window-header-button {
   display: block;
-  width: 26px;
-  height: 26px;
+  width: 31px;
+  height: 31px;
+  padding: 5px;
   background: url("/images/decorative-images/cross.svg") no-repeat 50% 50%;
+  border: transparent;
+  transition-duration: 200ms;
+}
+
+.modal-window-header-button:hover {
+  opacity: 0.6;
+}
+
+.modal-window-header-button:active {
+  opacity: 0.3;
+}
+
+.modal-window-header-button:focus {
+  border:2px solid #AF4FFF;
 }
 
 form.modal-window-form {
@@ -1333,11 +1367,32 @@ form.modal-window-form {
 }
 
 .name {
+  position: relative;
   grid-area: name;
 }
 
 .email {
+  position: relative;
   grid-area: email;
+}
+
+.name::after,
+.email::after {
+  position: absolute;
+  content: "";
+  right: 20px;
+  top:50%;
+  width: 15px;
+  height: 12px;
+
+}
+
+.name::after {
+  background: url("/images/decorative-images/modal-window-userpic.svg") no-repeat 50% 50%;
+}
+
+.email::after {
+  background: url("/images/decorative-images/modal-window-envelope.svg") no-repeat 50% 50%;
 }
 
 .message {
@@ -1351,6 +1406,7 @@ form.modal-window-form {
 .delivery-form-btn {
   grid-area: btn;
   justify-self: start;
+  padding: 10px 25px;
 }
 
 .name,
@@ -1417,8 +1473,43 @@ input.quantity {
   border: none;
 }
 
-.delivery-form-btn,
+.quantity-info::after {
+  position: absolute;
+  content: "Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.";
+  right: -40px;
+  top:36px;
+  display: none;
+  width: 164px;
+  padding: 19px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color:#FFFFFF;
+  background-color: #000000;
+  border-bottom: 10px solid #E5E5E5;
+}
+
+.quantity-info::before {
+  position: absolute;
+  content: "";
+  top: 30px;
+  display: none;
+  width: 14px;
+  height: 6px;
+  background: url("/images/decorative-images/modal-window-triange.svg") no-repeat 50% 50%;
+}
+
+.quantity-info:hover::after,
+.quantity-info:focus::after,
+.quantity-info:hover::before,
+.quantity-info:focus::before {
+  display: block;
+}
+
+
 .modal-window-title {
+  margin: 0;
   padding: 0;
   text-align: left;
 }
