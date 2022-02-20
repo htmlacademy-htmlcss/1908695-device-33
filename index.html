@@ -28,8 +28,50 @@
         <li class="nav-user-item">
           <a class="user-nav-link compare" href="#">Сравнить</a>
         </li>
-        <li class="nav-user-item">
+        <li class="nav-user-item basket-item">
           <a class="user-nav-link basket" href="#">Корзина</a>
+          <div class="basket-popover">
+            <span class="popover-triangle"></span>
+            <div class="basket-list-wrapper popover-container">
+              <ul class="basket-list">
+                <li class="basket-list-item">
+                  <a class="basket-list-link" href="#">
+                    <img class="basket-list-img" src="/images/content-images/basket-item-1.png" width="39" height="44" alt="Любительская селфи-палка">
+                    <h4 class="basket-list-title">Любительская <nobr>селфи-палка</nobr></h4>
+                  </a>
+                </li>
+              </ul>
+              <button class="delete" type="button">
+                <span class="visually-hidden">удалить товар из корзины</span>
+              </button>
+            </div>
+            <div class="basket-list-wrapper popover-container">
+              <ul class="basket-list">
+                <li class="basket-list-item">
+                  <a class="basket-list-link" href="#">
+                    <img class="basket-list-img" src="images/content-images/basket-item-2.png" width="39" height="44" alt="Профессиональная селфи-палка">
+                    <h4 class="basket-list-title">Профессиональная <nobr>селфи-палка</nobr></h4>
+                  </a>
+                </li>
+              </ul>
+              <button class="delete" type="button">
+                <span class="visually-hidden">удалить товар из корзины</span>
+              </button>
+            </div>
+            <dl class="basket-info">
+              <div class="popover-container basket-info-container">
+                <div class="dl-basket-wrapper">
+                  <dt class="total-items total">Товаров:&thinsp;</dt>
+                  <dd class="total-items-quantity">2</dd>
+                </div>
+                <div class="dl-basket-wrapper">
+                  <dt class="total-sum total">Сумма:&thinsp;</dt>
+                  <dd class="total-sum-quantity">2000&nbsp;&#8381;</dd>
+                </div>
+              </div>
+            </dl>
+            <button class="basket-open btn popover-container" type="button" aria-label="открыть корзину">Открыть корзину</button>
+          </div>
         </li>
       </ul>
     </div>
