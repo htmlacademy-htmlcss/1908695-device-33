@@ -71,6 +71,7 @@ body {
   padding-top: 46px;
   padding-bottom: 180px;
   margin-top: 35px;
+  word-wrap: break-word;
   background-color: #FFE17F;
 }
 
@@ -1168,6 +1169,7 @@ span.subscription::before {
   text-decoration: none;
 }
 
+
 .breadcrumb-link {
   display: block;
   padding: 10px 0;
@@ -1218,9 +1220,9 @@ section.filter {
 .sort-button-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*column-gap: 10px;*/
   width: 60px;
 }
+
 .sort-selector {
   width: 30px;
   height: 30px;
@@ -1265,11 +1267,77 @@ section.filter {
 legend.filter-title {
   width:200px;
   border-top:2px solid #000000;
+  padding-top: 12px;
+  margin-bottom: 20px;
 }
 
 fieldset.filter {
+  margin: 0;
+  margin-bottom: 35px;
   padding: 0;
   border: none;
+}
+
+.filter-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.range-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-label::after {
+  content: "";
+  display: block;
+  min-width: 209px;
+  min-height: 18px;
+  background: url("/images/decorative-images/range-slider.svg") no-repeat 50% 50%;
+}
+
+.range-level {
+  font-size: 15px;
+  line-height: 18px;
+  color:rgba(0, 0, 0, 0.3);
+}
+
+.span-range-level-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 155px;
+}
+.label-choice {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.label-choice::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 3px;
+  background-color: #EBEBEB;
+}
+
+.radio::before {
+  border-radius: 50%;
+}
+
+.filter-input:checked + .label-choice::before {
+  border: 2px solid #000000;
+  background: url("/images/decorative-images/tick-checkbox.svg") no-repeat 50% 50%;
+}
+
+.filter-input:checked + .radio::before {
+  background: url("/images/decorative-images/radio-disc.svg") no-repeat 50% 50%;
 }
 
 .filter-show {
@@ -1313,6 +1381,20 @@ form.modal-window-form {
   flex-direction: column;
 }
 
+.new {
+  position: relative;
+}
+
+.new::before {
+  position: absolute;
+  content: "";
+  top:27px;
+  left: 273px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("/images/decorative-images/new.svg") no-repeat 50% 50%;
+}
 .product-card-info-wrapper {
   display: flex;
   align-items: center;
