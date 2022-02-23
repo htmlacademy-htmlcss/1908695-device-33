@@ -39,6 +39,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
+  overflow-x: hidden;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -766,9 +767,11 @@ button.modal-window:active  {
 
 .service-container::before {
   position: absolute;
+ display: block;
   content: "";
   top:175px;
-  left: 0;
+  left: -1000px;
+  right: -1000px;
   z-index: -1;
   min-width: 100vw;
   height: 280px;
