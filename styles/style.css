@@ -283,7 +283,7 @@ body {
   position: relative;
 }
 
-.basket:hover + .basket-popover {
+.basket-item:hover  .basket-popover {
   position: absolute;
   content: "";
   right: -75px;
