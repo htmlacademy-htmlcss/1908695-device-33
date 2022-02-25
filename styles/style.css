@@ -93,25 +93,20 @@ body {
   cursor: pointer;
 }
 
-.logo:hover,
-.logo-footer:hover,
+.logo:hover .logo-photo,
+.logo-footer:hover .logo-footer-photo,
 .breadcrumb-link:hover,
 .sort-select:hover {
   opacity: 0.6;
 }
 
-.logo:active,
-.logo-footer:active,
+.logo:active .logo-photo,
+.logo-footer:active .logo-footer-photo,
 .breadcrumb-link:active,
 .sort-select:active {
   opacity: 0.3;
 }
 
-.logo:focus,
-.logo-footer:focus,
-.breadcrumb-link:focus {
-  outline:2px solid #AF4FFF;
-}
 
 .nav-user-wrapper {
   display: flex;
@@ -615,7 +610,11 @@ button.modal-window:focus,
 .pagination-link:focus,
 .product-card:focus,
 .sort-select:focus,
-.filter-choice-item:focus  .label-choice::before {
+.filter-choice-item:focus  .label-choice::before,
+.modal-window-input:focus,
+.logo:focus .logo-photo,
+.logo-footer:focus .logo-footer-photo,
+.breadcrumb-link:focus {
   outline:2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -626,7 +625,8 @@ button.modal-window:focus,
 .promo-list-pagination:disabled,
 .current-pagination:disabled,
 .product-show-more:disabled,
-.sort-select:disabled {
+.sort-select:disabled,
+.modal-window-input:disabled {
  opacity: 0.1;
 }
 
@@ -1123,6 +1123,7 @@ span.subscription::before {
 .logo-footer-photo {
   display: block;
   margin-bottom: 35px;
+  fill:rgba(255, 199, 0, 1);
 }
 
 .footer-address {
@@ -1698,13 +1699,23 @@ form.modal-window-form {
   background-color: #DCDCDC;
   color: rgba(0, 0, 0, 0.3);
 }
+.modal-window-container-wrapper {
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  width:100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+}
 
 .modal-window-container {
   position: relative;
   width: 760px;
-  margin: 0 auto;
+  margin: auto;
   padding: 42px 80px;
   border: 10px solid #000000;
+  background-color: #FFFFFF;
 }
 
 .modal-window-container::after {
@@ -1843,8 +1854,8 @@ form.modal-window-form {
   border: none;
 }
 
-.user-email-input {
-  border: 2px solid #FF3D3D;
+.modal-window-input:hover {
+  background-color: #DCDCDC;;
 }
 
 .warning,
@@ -1853,15 +1864,26 @@ form.modal-window-form {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #FF3D3D;
-}
-
-.name-enter {
   color: #000000;
 }
 
+.modal-window-input:invalid {
+  border: 2px solid #FF3D3D;
+}
+
+.invalid + .warning {
+  color: #FF3D3D;
+}
+
+
+input.quantity::-webkit-outer-spin-button,
+input.quantity::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+
 input.quantity {
-  padding: 20px 60px;
+  padding: 20px 60px 20px 70px;
 }
 
 .quantity > .modal-window-label {
@@ -1883,6 +1905,7 @@ input.quantity {
   content: "Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.";
   right: -40px;
   top:36px;
+  z-index: 2;
   display: none;
   width: 164px;
   padding: 19px;
@@ -1912,6 +1935,31 @@ input.quantity {
   display: block;
 }
 
+
+.quantity-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-change {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  border: none;
+}
+
+.less {
+  left: 10%;
+  background: url("/images/decorative-images/minus-icon.svg") no-repeat 50% 50%;
+}
+
+.more {
+  right: 10%;
+  background: url("/images/decorative-images/plus-icon.svg") no-repeat 50% 50%;
+}
 .modal-window-title {
   margin: 0;
   padding: 0;
@@ -1921,6 +1969,10 @@ input.quantity {
 .modal-window-label {
   display: block;
   margin-bottom: 14px;
+}
+
+.modal-window-container-close {
+  display: none;
 }
 
 .basket-popover {
