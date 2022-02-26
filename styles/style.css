@@ -356,21 +356,32 @@ body {
   padding: 12px 0;
 }
 
-label.nav-main-link {
+.nav-main-subnav-label {
   position: relative;
   display: inline-flex;
   align-items: center;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-label.nav-main-link::after {
+.nav-main-subnav-label::after {
   width: 50px;
   height: 50px;
   margin-left: 10px;
   content: "";
   background: url("/images/decorative-images/plus-pic.svg") no-repeat;
+  opacity: 0.3;
 }
 
-.nav-main-subnav-opener:checked ~ label.nav-main-link::after {
+.nav-main-subnav-opener:checked ~ .nav-main-subnav-label::after {
   display: none;
 }
 
@@ -384,7 +395,7 @@ label.nav-main-link::after {
   padding: 33px 60px 27px 60px;
 }
 
-.nav-main-subnav-opener:checked ~ label.nav-main-link::before {
+.nav-main-subnav-opener:checked ~ .nav-main-subnav-label::before {
   position: absolute;
   z-index: 2;
   content: "";
@@ -394,6 +405,13 @@ label.nav-main-link::after {
   left: 236px;
   background: url("/images/decorative-images/minus-pic.svg") no-repeat;
   opacity: 0.3;
+}
+
+.nav-main-subnav-opener:hover ~ .nav-main-subnav-label::before,
+.nav-main-subnav-opener:hover ~ .nav-main-subnav-label,
+.nav-main-subnav-opener:hover ~ .nav-main-subnav-label::after{
+  cursor: pointer;
+  opacity: 1;
 }
 
 .nav-main-subnav {
@@ -639,7 +657,8 @@ p.promo-list-item-description {
 .login:focus,
 .user-login:focus,
 .nav-main-link:focus,
-.nav-main-subnav-opener:focus + label.nav-main-link,
+.nav-main-subnav-opener:focus + .nav-main-subnav-label,
+.nav-main-subnav-link:focus,
 .photo-pagination:focus,
 .catalog-list-item-link:focus,
 .catalog-list-item-link:focus::before,
