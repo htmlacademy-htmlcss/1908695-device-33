@@ -236,6 +236,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 52px;
 }
 
 .nav-main-catalog {
@@ -331,10 +332,6 @@ body {
   position: relative;
 }
 
-.nav-main-subnav-opener {
-  display: none;
-}
-
 .nav-main-subnav-wrapper {
   position: relative;
   display: none;
@@ -384,7 +381,7 @@ label.nav-main-link::after {
   display: flex;
   box-sizing: border-box;
   width: 1160px;
-  padding: 33px 425px 27px 60px;
+  padding: 33px 60px 27px 60px;
 }
 
 .nav-main-subnav-opener:checked ~ label.nav-main-link::before {
@@ -436,18 +433,26 @@ label.nav-main-link::after {
 .about-and-contacts {
   margin-bottom: 70px;
 }
-
+.promo-list {
+  margin-bottom: 102px;
+}
 .promo-list-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 102px;
+  margin-bottom: 439px;
 }
+
+.promo-list-item:last-child {
+  margin-bottom: 0;
+}
+
 
 .promo-list-item-photo-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 2;
   width: 560px;
   margin-top: -150px;
 }
@@ -501,6 +506,18 @@ label.nav-main-link::after {
 
 .promo-wrapper-second::before {
   content: "02";
+}
+
+.promo-wrapper-second::after,
+.promo-wrapper-third::after {
+  position: absolute;
+  content: "";
+  top:-270px;
+  right: 0;
+  z-index: -2;
+  width: 1160px;
+  height: 300px;
+  background-color: #FFE17F;;
 }
 
 .promo-wrapper-third::before {
@@ -622,7 +639,7 @@ p.promo-list-item-description {
 .login:focus,
 .user-login:focus,
 .nav-main-link:focus,
-.nav-main-subnav-link:focus,
+.nav-main-subnav-opener:focus + label.nav-main-link,
 .photo-pagination:focus,
 .catalog-list-item-link:focus,
 .catalog-list-item-link:focus::before,
@@ -1761,6 +1778,7 @@ form.modal-window-form {
   position: fixed;
   top:0;
   left:0;
+  z-index: 5;
   display: flex;
   width:100%;
   height: 100%;
@@ -1933,17 +1951,19 @@ form.modal-window-form {
   color: #FF3D3D;
 }
 
-
 input.quantity::-webkit-outer-spin-button,
 input.quantity::-webkit-inner-spin-button {
   appearance: none;
 }
 
-
 input.quantity {
   padding: 20px 60px 20px 70px;
+  box-sizing: border-box;
 }
 
+input.quantity:invalid {
+  border: 2px solid #FF3D3D;
+}
 .quantity > .modal-window-label {
   position: relative;
 }
@@ -1993,7 +2013,6 @@ input.quantity {
   display: block;
 }
 
-
 .quantity-input-wrapper {
   position: relative;
   display: flex;
@@ -2007,6 +2026,7 @@ input.quantity {
   height: 16px;
   content: "";
   border: none;
+  cursor: pointer;
 }
 
 .less {
