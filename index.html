@@ -13,11 +13,19 @@
 <header class="page-header container">
   <nav class="navigation">
     <a class="logo" title="главная страница сайта Девайс">
-      <img class="logo-photo" src="/images/content-images/logo-header.svg" height="37" width="145" alt="Логотип компании Девайс">
+      <svg  class="logo-photo" aria-hidden="true" focusable="false" width="145" height="36" viewBox="0 0 145 36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27.2188 0V35.3H19.6135V32.9C17.9124 34.8 15.5107 36 12.1084 36C5.5038 36 0 30.2 0 22.7C0 15.2 5.5038 9.4 12.1084 9.4C15.5107 9.4 18.0124 10.6 19.6135 12.5V0H27.2188ZM19.6135 22.7C19.6135 18.9 17.1118 16.5 13.6094 16.5C10.107 16.5 7.60524 18.9 7.60524 22.7C7.60524 26.5 10.107 28.9 13.6094 28.9C17.1118 28.8 19.6135 26.5 19.6135 22.7Z"/>
+        <path d="M43.7298 29.1999C45.8313 29.1999 47.5325 28.3999 48.5332 27.2999L54.6374 30.7999C52.1356 34.1999 48.4331 35.9999 43.6298 35.9999C35.0238 35.9999 29.6201 30.1999 29.6201 22.6999C29.6201 15.1999 35.0238 9.3999 43.0294 9.3999C50.4345 9.3999 55.8382 15.0999 55.8382 22.6999C55.8382 23.7999 55.7381 24.7999 55.538 25.6999H37.6256C38.6263 28.2999 40.9279 29.1999 43.7298 29.1999ZM48.333 20.0999C47.5325 17.1999 45.2309 16.0999 42.9293 16.0999C40.0273 16.0999 38.126 17.4999 37.4255 20.0999H48.333Z"/>
+        <path d="M82.1563 10.1001L72.8499 35.3001H64.2439L54.9375 10.1001H63.3433L68.647 26.1001L73.9506 10.1001C73.9506 10.1001 82.1563 10.1001 82.1563 10.1001Z"/>
+        <path d="M83.458 10.1001H91.0633V35.3001H83.458V10.1001Z"/>
+        <path d="M93.665 22.6999C93.665 15.1999 99.369 9.3999 107.074 9.3999C111.978 9.3999 116.281 11.9999 118.482 15.8999L111.878 19.6999C110.977 17.8999 109.176 16.8999 106.974 16.8999C103.672 16.8999 101.27 19.2999 101.27 22.6999C101.27 26.1999 103.672 28.4999 106.974 28.4999C109.176 28.4999 111.077 27.3999 111.878 25.6999L118.482 29.4999C116.381 33.3999 112.078 35.9999 107.074 35.9999C99.369 35.9999 93.665 30.1999 93.665 22.6999Z"/>
+        <path d="M132.892 29.1999C134.993 29.1999 136.695 28.3999 137.695 27.2999L143.799 30.7999C141.298 34.1999 137.595 35.9999 132.792 35.9999C124.186 35.9999 118.782 30.1999 118.782 22.6999C118.782 15.1999 124.286 9.3999 132.191 9.3999C139.597 9.3999 145 15.0999 145 22.6999C145 23.7999 144.9 24.7999 144.7 25.6999H126.788C127.788 28.2999 130.09 29.1999 132.892 29.1999ZM137.595 20.0999C136.795 17.1999 134.493 16.0999 132.191 16.0999C129.289 16.0999 127.388 17.4999 126.688 20.0999H137.595Z"/>
+        <path d="M83.458 0V10.1L91.0633 0H83.458Z"/>
+      </svg>
     </a>
     <div class="nav-user-wrapper">
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label for="search-form-input" class="search-label"></label>
+        <label class="search-label" for="search-form-input"></label>
         <input class="search-form-input" id="search-form-input" type="search" name="search" placeholder="Текст поиска">
         <button class="search-button" type="submit">Найти</button>
       </form>
@@ -78,8 +86,8 @@
     <div class="nav-main-wrapper">
       <ul class="nav-main nav-main-catalog">
         <li class="nav-main-item">
-          <input class="nav-main-subnav-opener" id="main-subnav" type="checkbox" name="nav-main-subnav">
-          <label class="nav-main-link" for="main-subnav">Каталог товаров</label>
+          <input class="nav-main-subnav-opener visually-hidden" id="main-subnav" type="checkbox" name="nav-main-subnav">
+          <label class="nav-main-subnav-label" for="main-subnav">Каталог товаров</label>
           <div class="nav-main-subnav-wrapper">
             <ul class="nav-main-subnav wide">
               <li class="nav-main-subnav-item">
@@ -146,7 +154,7 @@
            <div class="details-pagination-wrapper">
              <a class="promo-list-item-details btn" href="#">Подробнее</a>
              <div class="pagination-wrapper">
-               <button class="promo-list-pagination current-pagination border-pagination" type="button">
+               <button class="promo-list-pagination current-pagination" type="button">
                  <span class="visually-hidden">текущий слайд</span>
                </button>
                <button class="promo-list-pagination" type="button">
@@ -169,7 +177,7 @@
            </table>
          </div>
        </li>
-       <li class="promo-list-item">
+       <li class="promo-list-item click-item">
          <div class="promo-list-item-photo-wrapper">
            <button class="promo-list-photo-back photo-pagination" type="button">
              <span class="visually-hidden">назад</span>
@@ -209,7 +217,7 @@
            </table>
          </div>
       </li>
-      <li class="promo-list-item">
+      <li class="promo-list-item click-item">
         <div class="promo-list-item-photo-wrapper">
           <button class="promo-list-photo-back photo-pagination" type="button">
             <span class="visually-hidden">назад</span>
@@ -302,7 +310,7 @@
            </div>
          </section>
        </div>
-       <div class="service-container">
+       <div class="service-container service-container-hidden">
          <ul class="navigation-service">
            <li class="navigation-service-item">
              <button class="navigation-service-btn btn" type="button">Доставка</button>
@@ -326,7 +334,7 @@
            </div>
          </section>
        </div>
-       <div class="service-container">
+       <div class="service-container service-container-hidden">
          <ul class="navigation-service">
            <li class="navigation-service-item">
              <button class="navigation-service-btn btn" type="button">Доставка</button>
@@ -411,9 +419,16 @@
    <div class="container page-footer-wrapper">
      <section class="footer-address">
        <h2 class="visually-hidden">Адрес</h2>
-       <a class="logo-footer" href="index.html">
-         <img class="logo-footer-photo" src="/images/content-images/logo-footer.svg" height="37" width="145"
-              alt="Логотип компании Девайс">
+       <a class="logo-footer" href="index.html" title="на главную страницу  магазина электронных товаров Девайс">
+         <svg  class="logo-footer-photo" aria-hidden="true" focusable="false" width="145" height="36" viewBox="0 0 145 36" xmlns="http://www.w3.org/2000/svg">
+           <path d="M27.2188 0V35.3H19.6135V32.9C17.9124 34.8 15.5107 36 12.1084 36C5.5038 36 0 30.2 0 22.7C0 15.2 5.5038 9.4 12.1084 9.4C15.5107 9.4 18.0124 10.6 19.6135 12.5V0H27.2188ZM19.6135 22.7C19.6135 18.9 17.1118 16.5 13.6094 16.5C10.107 16.5 7.60524 18.9 7.60524 22.7C7.60524 26.5 10.107 28.9 13.6094 28.9C17.1118 28.8 19.6135 26.5 19.6135 22.7Z"/>
+           <path d="M43.7298 29.1999C45.8313 29.1999 47.5325 28.3999 48.5332 27.2999L54.6374 30.7999C52.1356 34.1999 48.4331 35.9999 43.6298 35.9999C35.0238 35.9999 29.6201 30.1999 29.6201 22.6999C29.6201 15.1999 35.0238 9.3999 43.0294 9.3999C50.4345 9.3999 55.8382 15.0999 55.8382 22.6999C55.8382 23.7999 55.7381 24.7999 55.538 25.6999H37.6256C38.6263 28.2999 40.9279 29.1999 43.7298 29.1999ZM48.333 20.0999C47.5325 17.1999 45.2309 16.0999 42.9293 16.0999C40.0273 16.0999 38.126 17.4999 37.4255 20.0999H48.333Z"/>
+           <path d="M82.1563 10.1001L72.8499 35.3001H64.2439L54.9375 10.1001H63.3433L68.647 26.1001L73.9506 10.1001C73.9506 10.1001 82.1563 10.1001 82.1563 10.1001Z"/>
+           <path d="M83.458 10.1001H91.0633V35.3001H83.458V10.1001Z"/>
+           <path d="M93.665 22.6999C93.665 15.1999 99.369 9.3999 107.074 9.3999C111.978 9.3999 116.281 11.9999 118.482 15.8999L111.878 19.6999C110.977 17.8999 109.176 16.8999 106.974 16.8999C103.672 16.8999 101.27 19.2999 101.27 22.6999C101.27 26.1999 103.672 28.4999 106.974 28.4999C109.176 28.4999 111.077 27.3999 111.878 25.6999L118.482 29.4999C116.381 33.3999 112.078 35.9999 107.074 35.9999C99.369 35.9999 93.665 30.1999 93.665 22.6999Z"/>
+           <path d="M132.892 29.1999C134.993 29.1999 136.695 28.3999 137.695 27.2999L143.799 30.7999C141.298 34.1999 137.595 35.9999 132.792 35.9999C124.186 35.9999 118.782 30.1999 118.782 22.6999C118.782 15.1999 124.286 9.3999 132.191 9.3999C139.597 9.3999 145 15.0999 145 22.6999C145 23.7999 144.9 24.7999 144.7 25.6999H126.788C127.788 28.2999 130.09 29.1999 132.892 29.1999ZM137.595 20.0999C136.795 17.1999 134.493 16.0999 132.191 16.0999C129.289 16.0999 127.388 17.4999 126.688 20.0999H137.595Z"/>
+           <path d="M83.458 0V10.1L91.0633 0H83.458Z"/>
+         </svg>
        </a>
        <address class="footer-address">
          <p class="address-details-footer"><nobr>Санкт-Петербург,</nobr> набережная реки <nobr>Карповки, 5,</nobr>
@@ -455,7 +470,7 @@
        <h2 class="visually-hidden">Контактный телефон</h2>
        <a class="footer-phone-link" href="tel:+78128121212">Тел:&nbsp;+7(812) 812-12-12</a>
        <a class="htmlacademy-link" href="https://htmlacademy.ru/" rel="nofollow noopener">
-         <svg class="htmlacademy-link-svg" width="115" height="33" viewBox="0 0 115 33" xmlns="http://www.w3.org/2000/svg">
+         <svg class="htmlacademy-link-svg" aria-hidden="true" focusable="false" width="115" height="33" viewBox="0 0 115 33" xmlns="http://www.w3.org/2000/svg">
            <path d="M0 12.9V15.5H2.5V12.9H0Z"/>
            <path d="M11.6 4.5C10 4.5 8.8 5.2 8 6.2H7.9V0H5.9V15.5H7.9V10.2C7.9 8.1 9.2 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z" />
            <path d="M26.6 4.8H21.8V1.1H19.8V4.9H17.9V6.9H19.8V12.9C19.8 14.6 20.8 15.6 22.5 15.6H26.6V13.6H22.9C22.2 13.6 21.8 13.2 21.8 12.5V6.8H26.6V4.8Z" />
@@ -473,5 +488,49 @@
      </section>
    </div>
  </footer>
+<div class="modal-window-container-wrapper modal-window-container-close">
+  <div class="modal-window-container">
+    <header class="modal-window-header">
+      <h2 class="modal-window-title">Доставка под заказ</h2>
+      <button class="modal-window-header-button" type="button">
+        <span class="visually-hidden">кнопка закрытия модального окна</span>
+      </button>
+    </header>
+    <form class="modal-window-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="name">
+        <label class="modal-window-label" for="username">Ваше имя:</label>
+        <input class="user-name-input modal-window-input" id="username" type="text" placeholder="Введите имя">
+      </div>
+      <div class="email">
+        <label class="modal-window-label" for="email">Ваш e-mail:</label>
+        <input class="user-email-input modal-window-input invalid" id="email" type="email" placeholder="Введите почту"
+               value="почта" required>
+        <p class="warning">Забавный у вас адрес</p>
+      </div>
+      <div class="message">
+        <label class="modal-window-label" for="message">Что нужно привезти</label>
+        <textarea class="user-message modal-window-input" id="message" placeholder="В свободной форме"
+                  rows="1"></textarea>
+      </div>
+      <div class="quantity">
+        <label class="modal-window-label" for="quantity">Количество:
+          <button class="quantity-info" type="button">
+            <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+          </button>
+        </label>
+        <div class=quantity-input-wrapper>
+          <button class="quantity-change less" type="button">
+            <span class="visually-hidden">уменьшить на одну единицу товара</span>
+          </button>
+          <input class="quantity modal-window-input" id="quantity" type="number" min="1" max="100" step="1" value="1">
+          <button class="quantity-change more" type="button">
+            <span class="visually-hidden">добавить одну единицу товара</span>
+          </button>
+        </div>
+      </div>
+      <button class="delivery-form-btn btn" type="submit" aria-label="отправить форму">Отправить</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
