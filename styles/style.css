@@ -662,6 +662,7 @@ p.promo-list-item-description {
 .user-nav-link:focus,
 .nav-main-link:focus,
 .nav-main-subnav-opener:focus + .nav-main-subnav-label,
+.nav-main-subnav-opener:focus + .nav-main-subnav-label:before,
 .nav-main-subnav-link:focus,
 .photo-pagination:focus,
 .catalog-list-item-link:focus,
